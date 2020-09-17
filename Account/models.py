@@ -5,13 +5,13 @@ class AccountManager(BaseUserManager):
     def create_user(self, email, username, is_author, password=None):
         if not email or not username: raise ValueError()        
 
-        user = self.model(email=email, username=username, is_author=is_author)           
+        user = self.model(email=self.normalize_email(email), username=username, is_author=is_author)           
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, email, username, is_author, password):
-        user = self.create_user(email=email, password=password, username=username, is_author=is_author)
+        user = self.create_user(email=self.normalize_email(email), password=password, username=username, is_author=is_author)
         user.is_admin = True
         user.is_staff = True
         user.is_superuser = True
