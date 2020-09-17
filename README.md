@@ -69,7 +69,8 @@ You can use any virtual environment you want, but I prefer [virtualenv](https://
 __1. Setting Up Virtual Environment__<br>
 Open terminal in the root directory of this project
 ```
-pip install virtualenv env
+pip install virtualenv
+virtualenv env
 ```
 
 __2. Activate Your Virtual Environment__<br>
