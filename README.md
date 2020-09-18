@@ -37,8 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A Django app that handle the flow of a report card management for school. This app will produce a dynamic pdf file that can be downloaded. This app is a submission for my "Project Work" assignment
-
+Digibit Studio's Official Blog Web App. Built With Django
 ### Built With
 
 * [Python](https://www.python.org/)
@@ -114,7 +113,7 @@ Default port is 8000, so access the [server](127.0.0.1:8000) there
 
 ### Admin Site
 To access the admin site visit the /admin url<br>
-You will need your "Nomor Induk" & "Password" from [step 5](#installation) as a login authentication
+You will need your "Email" & "Password" from [step 5](#installation) as a login authentication
 
 ### Connecting With The Google API
 To connect with the Google API, please login to the [admin site](#admin-site)
