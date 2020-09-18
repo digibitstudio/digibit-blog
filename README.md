@@ -123,7 +123,7 @@ Find the Sites, then click "ADD SITES"
 * Put "http://127.0.0.1:8000" as domain name
 * Put "Digibit Blog" as display name
 
-Find the Social Applications, then click "ADD SOCIAL APPLICATION"<br
+Find the Social Applications, then click "ADD SOCIAL APPLICATION"<br>
 * Select "Google" as provider
 * Put "Digibit Blog" as name
 * Put "233648956225-dvstkstqpvvuhmuir69nipprs7df71pn.apps.googleusercontent.com" as client id
