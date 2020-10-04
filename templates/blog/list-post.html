@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in object_list %}
+        <div>
+            <a href="{% url 'detail-post' post.slug %}">{{post}}</a>
+        </div>      
+    {% endfor %}
+    <br><br>
+    {% if user.is_authenticated %}
+        {% if user.is_superuser or user.is_staff %}
+          <a href="{% url 'create-post' %}">Create a post</a>
+        {% endif %}          
+    {% endif %}
+{% endblock content %}

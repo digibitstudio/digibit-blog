@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{object.title}}</h1>
+    <small>{{object.author}}-{{object.date}}</small>
+
+    <p>{{object.body}}</p>
+
+    {% if user.is_superuser or user.is_staff %}
+        <a href="{% url 'delete-post' object.slug %}">Delete Post</a>
+    {% endif %}
+
+    <br>{{object.upvote|default_if_none:0}}
+{% endblock content %}

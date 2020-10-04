@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
+    'djrichtextfield',
+
     'Author',
+    'Blog',
+    'Comment',
 ]
 
 MIDDLEWARE = [
@@ -150,3 +154,19 @@ SOCIALACCOUNT_AUTO_SIGNUP = False
 
 # Override Django Settings
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# Rich Text Field
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.ckeditor.com/4.14.0/standard/ckeditor.js'],
+    'init_template': 'djrichtextfield/init/ckeditor.js',
+    'settings': {  # CKEditor
+        'toolbar': [
+            {'items': ['Format', '-', 'Bold', 'Italic', '-',
+                    'RemoveFormat']},
+            {'items': ['Link', 'Unlink', 'Image', 'Table']},
+            {'items': ['Source']}
+        ],
+        'format_tags': 'p;h1;h2;h3',
+        'width': 700,
+    }
+}
